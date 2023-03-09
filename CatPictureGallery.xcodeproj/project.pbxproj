@@ -18,6 +18,12 @@
 		9265621E29B941F500A5F2DC /* CatPictureGalleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9265621D29B941F500A5F2DC /* CatPictureGalleryTests.swift */; };
 		9265622829B941F500A5F2DC /* CatPictureGalleryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9265622729B941F500A5F2DC /* CatPictureGalleryUITests.swift */; };
 		9265622A29B941F500A5F2DC /* CatPictureGalleryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9265622929B941F500A5F2DC /* CatPictureGalleryUITestsLaunchTests.swift */; };
+		9265623C29BA236A00A5F2DC /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9265623B29BA236A00A5F2DC /* Image.swift */; };
+		9265623E29BA33DD00A5F2DC /* ImagesCatUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9265623D29BA33DD00A5F2DC /* ImagesCatUseCase.swift */; };
+		9265624229BA37C100A5F2DC /* GaleriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9265624129BA37C100A5F2DC /* GaleriesRepository.swift */; };
+		9265624429BA412C00A5F2DC /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9265624329BA412C00A5F2DC /* Gallery.swift */; };
+		9265624729BA525300A5F2DC /* GaleriesRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9265624629BA525300A5F2DC /* GaleriesRepositoryImpl.swift */; };
+		9265624A29BA52AE00A5F2DC /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9265624929BA52AE00A5F2DC /* Cancellable.swift */; };
 		A6335C611D75A171DB13DEF8 /* Pods_CatPictureGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 560D5DA282DFB2FD6A532C6E /* Pods_CatPictureGallery.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +64,12 @@
 		9265622329B941F500A5F2DC /* CatPictureGalleryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatPictureGalleryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9265622729B941F500A5F2DC /* CatPictureGalleryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatPictureGalleryUITests.swift; sourceTree = "<group>"; };
 		9265622929B941F500A5F2DC /* CatPictureGalleryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatPictureGalleryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9265623B29BA236A00A5F2DC /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		9265623D29BA33DD00A5F2DC /* ImagesCatUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCatUseCase.swift; sourceTree = "<group>"; };
+		9265624129BA37C100A5F2DC /* GaleriesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleriesRepository.swift; sourceTree = "<group>"; };
+		9265624329BA412C00A5F2DC /* Gallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
+		9265624629BA525300A5F2DC /* GaleriesRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleriesRepositoryImpl.swift; sourceTree = "<group>"; };
+		9265624929BA52AE00A5F2DC /* Cancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
 		BD7FD97055B5D95F167A9352 /* Pods-CatPictureGalleryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatPictureGalleryTests.debug.xcconfig"; path = "Target Support Files/Pods-CatPictureGalleryTests/Pods-CatPictureGalleryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE9B9C92E56E68DA885E1B30 /* Pods-CatPictureGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatPictureGallery.release.xcconfig"; path = "Target Support Files/Pods-CatPictureGallery/Pods-CatPictureGallery.release.xcconfig"; sourceTree = "<group>"; };
 		D3F3A85BC3C032C7B8A51EAF /* Pods_CatPictureGalleryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatPictureGalleryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +138,10 @@
 		9265620529B941F300A5F2DC /* CatPictureGallery */ = {
 			isa = PBXGroup;
 			children = (
+				9265623729BA0BCE00A5F2DC /* Presentation */,
+				9265623629BA0BB800A5F2DC /* Domain */,
+				9265623829BA0BE700A5F2DC /* Data */,
+				9265624829BA529600A5F2DC /* Common */,
 				9265620629B941F300A5F2DC /* AppDelegate.swift */,
 				9265620829B941F300A5F2DC /* SceneDelegate.swift */,
 				9265620A29B941F300A5F2DC /* ViewController.swift */,
@@ -154,6 +170,80 @@
 			path = CatPictureGalleryUITests;
 			sourceTree = "<group>";
 		};
+		9265623629BA0BB800A5F2DC /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				9265623F29BA379300A5F2DC /* Interfaces */,
+				9265623929BA178100A5F2DC /* Entities */,
+				9265623A29BA233800A5F2DC /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		9265623729BA0BCE00A5F2DC /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		9265623829BA0BE700A5F2DC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9265624529BA521200A5F2DC /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		9265623929BA178100A5F2DC /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				9265623B29BA236A00A5F2DC /* Image.swift */,
+				9265624329BA412C00A5F2DC /* Gallery.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		9265623A29BA233800A5F2DC /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				9265623D29BA33DD00A5F2DC /* ImagesCatUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		9265623F29BA379300A5F2DC /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				9265624029BA37A100A5F2DC /* Repositories */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		9265624029BA37A100A5F2DC /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				9265624129BA37C100A5F2DC /* GaleriesRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		9265624529BA521200A5F2DC /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				9265624629BA525300A5F2DC /* GaleriesRepositoryImpl.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		9265624829BA529600A5F2DC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9265624929BA52AE00A5F2DC /* Cancellable.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		CE876D841E4820ABE0E63308 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,7 +254,6 @@
 				BD7FD97055B5D95F167A9352 /* Pods-CatPictureGalleryTests.debug.xcconfig */,
 				2F4F755481B2BD23D302D93F /* Pods-CatPictureGalleryTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -371,9 +460,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9265624A29BA52AE00A5F2DC /* Cancellable.swift in Sources */,
+				9265623E29BA33DD00A5F2DC /* ImagesCatUseCase.swift in Sources */,
+				9265623C29BA236A00A5F2DC /* Image.swift in Sources */,
+				9265624429BA412C00A5F2DC /* Gallery.swift in Sources */,
 				9265620B29B941F300A5F2DC /* ViewController.swift in Sources */,
 				9265620729B941F300A5F2DC /* AppDelegate.swift in Sources */,
+				9265624729BA525300A5F2DC /* GaleriesRepositoryImpl.swift in Sources */,
 				9265620929B941F300A5F2DC /* SceneDelegate.swift in Sources */,
+				9265624229BA37C100A5F2DC /* GaleriesRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,6 +649,7 @@
 				DEVELOPMENT_TEAM = FD649H8AGN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CatPictureGallery/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Cat Picture Gallery";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -584,6 +680,7 @@
 				DEVELOPMENT_TEAM = FD649H8AGN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CatPictureGallery/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Cat Picture Gallery";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
