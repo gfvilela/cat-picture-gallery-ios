@@ -6,6 +6,7 @@ target 'CatPictureGallery' do
   use_frameworks!
 
   # Pods for CatPictureGallery
+  pod 'Alamofire', '5.6.1'
 
   target 'CatPictureGalleryTests' do
     inherit! :search_paths
