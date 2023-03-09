@@ -11,4 +11,5 @@ struct Image {
     var id: String?
     var link: String?
     var description: String?
+    var type: String?
 }

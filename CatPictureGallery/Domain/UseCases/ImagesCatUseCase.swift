@@ -8,24 +8,29 @@
 import Foundation
 
 protocol ImagesCatUseCase {
-    func execute(completion: @escaping (Result<[Image], Error>) -> Void) -> Cancellable?
+    func execute(completion: @escaping (Result<[Image], Error>) -> Void)
 }
 
 final class ImagesCatUseCaseImpl: ImagesCatUseCase {
-    private let galeriesRepository: GaleriesRepository
+    private let galeriesRepository: GalleriesRepository
 
-    init(galeriesRepository: GaleriesRepository) {
+    init(galeriesRepository: GalleriesRepository) {
         self.galeriesRepository = galeriesRepository
     }
 
-    func execute(completion: @escaping (Result<[Image], Error>) -> Void) -> Cancellable? {
+    init() {
+        self.galeriesRepository = GalleriesRepositoryImpl()
+    }
+
+    func execute(completion: @escaping (Result<[Image], Error>) -> Void) {
         return galeriesRepository.fetchGalleryImagesCatList { resultFetch in
             switch resultFetch {
             case .success(let galleries):
-                var images: [Image] = []
+                var medias: [Image] = []
                 galleries.compactMap( { $0.images }).forEach { imagesFromGallery in
-                    images.append(contentsOf: imagesFromGallery)
+                    medias.append(contentsOf: imagesFromGallery)
                 }
+                let images = medias.filter({ ($0.type ?? "").contains("image") })
                 completion(Result.success(images))
             case .failure(let error):
                 completion(Result.failure(error))
