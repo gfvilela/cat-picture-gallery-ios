@@ -15,7 +15,9 @@ class ImagesListViewController: UIViewController {
         super.viewDidLoad()
 
         viewModel.items = { [weak self] images in
-            self?.imagesListCollectionView.items = images
+            DispatchQueue.main.async {
+                self?.imagesListCollectionView.items = images
+            }
         }
         viewModel.didLoad()
     }
