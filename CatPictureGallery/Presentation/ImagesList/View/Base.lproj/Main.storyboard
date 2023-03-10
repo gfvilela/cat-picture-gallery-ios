@@ -47,12 +47,28 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="vUN-iU-AfB">
+                                <rect key="frame" x="159.33333333333334" y="403" width="74.666666666666657" height="46.333333333333314"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="060-CR-P30">
+                                        <rect key="frame" x="27.333333333333314" y="0.0" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rlp-5t-Omq">
+                                        <rect key="frame" x="0.0" y="26" width="74.666666666666671" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6mh-Bf-z1o" secondAttribute="trailing" id="2f6-aU-lzr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6mh-Bf-z1o" secondAttribute="bottom" id="4sU-1f-1F0"/>
+                            <constraint firstItem="vUN-iU-AfB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8af-fh-CFd"/>
+                            <constraint firstItem="vUN-iU-AfB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fgR-g6-ayx"/>
                             <constraint firstItem="6mh-Bf-z1o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="foE-ed-iCF"/>
                             <constraint firstItem="6mh-Bf-z1o" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pbW-hs-nIT"/>
                         </constraints>
@@ -60,6 +76,7 @@
                     <navigationItem key="navigationItem" title="Cat Picture Gallery" id="VcR-UF-zZU"/>
                     <connections>
                         <outlet property="imagesListCollectionView" destination="6mh-Bf-z1o" id="cfD-DV-yBq"/>
+                        <outlet property="loadingView" destination="vUN-iU-AfB" id="PJI-br-9gf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
