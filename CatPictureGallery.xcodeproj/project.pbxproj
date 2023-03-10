@@ -29,6 +29,8 @@
 		9265625529BA7FEC00A5F2DC /* GalleriesResponseDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9265625429BA7FEC00A5F2DC /* GalleriesResponseDTO+Mapping.swift */; };
 		9265625829BA8F4D00A5F2DC /* RepositoryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9265625729BA8F4D00A5F2DC /* RepositoryError.swift */; };
 		9265625D29BAB7CC00A5F2DC /* ImagesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9265625C29BAB7CC00A5F2DC /* ImagesListViewModel.swift */; };
+		9265625F29BB68DC00A5F2DC /* ImagesListCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9265625E29BB68DC00A5F2DC /* ImagesListCollectionView.swift */; };
+		9265626229BB695600A5F2DC /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9265626129BB695600A5F2DC /* ImageCollectionViewCell.swift */; };
 		A6335C611D75A171DB13DEF8 /* Pods_CatPictureGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 560D5DA282DFB2FD6A532C6E /* Pods_CatPictureGallery.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +82,8 @@
 		9265625429BA7FEC00A5F2DC /* GalleriesResponseDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GalleriesResponseDTO+Mapping.swift"; sourceTree = "<group>"; };
 		9265625729BA8F4D00A5F2DC /* RepositoryError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryError.swift; sourceTree = "<group>"; };
 		9265625C29BAB7CC00A5F2DC /* ImagesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListViewModel.swift; sourceTree = "<group>"; };
+		9265625E29BB68DC00A5F2DC /* ImagesListCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListCollectionView.swift; sourceTree = "<group>"; };
+		9265626129BB695600A5F2DC /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD7FD97055B5D95F167A9352 /* Pods-CatPictureGalleryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatPictureGalleryTests.debug.xcconfig"; path = "Target Support Files/Pods-CatPictureGalleryTests/Pods-CatPictureGalleryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE9B9C92E56E68DA885E1B30 /* Pods-CatPictureGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatPictureGallery.release.xcconfig"; path = "Target Support Files/Pods-CatPictureGallery/Pods-CatPictureGallery.release.xcconfig"; sourceTree = "<group>"; };
 		D3F3A85BC3C032C7B8A51EAF /* Pods_CatPictureGalleryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatPictureGalleryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -301,6 +305,7 @@
 		9265625A29BAB71B00A5F2DC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9265626029BB691F00A5F2DC /* ImagesListCollectionView */,
 				9265620C29B941F300A5F2DC /* Main.storyboard */,
 				9265620A29B941F300A5F2DC /* ImagesListViewController.swift */,
 			);
@@ -313,6 +318,15 @@
 				9265625C29BAB7CC00A5F2DC /* ImagesListViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9265626029BB691F00A5F2DC /* ImagesListCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				9265625E29BB68DC00A5F2DC /* ImagesListCollectionView.swift */,
+				9265626129BB695600A5F2DC /* ImageCollectionViewCell.swift */,
+			);
+			path = ImagesListCollectionView;
 			sourceTree = "<group>";
 		};
 		CE876D841E4820ABE0E63308 /* Pods */ = {
@@ -569,12 +583,14 @@
 			files = (
 				9265623E29BA33DD00A5F2DC /* ImagesCatUseCase.swift in Sources */,
 				9265624D29BA663C00A5F2DC /* GalleryService.swift in Sources */,
+				9265626229BB695600A5F2DC /* ImageCollectionViewCell.swift in Sources */,
 				9265623C29BA236A00A5F2DC /* Image.swift in Sources */,
 				9265624429BA412C00A5F2DC /* Gallery.swift in Sources */,
 				9265620B29B941F300A5F2DC /* ImagesListViewController.swift in Sources */,
 				9265625529BA7FEC00A5F2DC /* GalleriesResponseDTO+Mapping.swift in Sources */,
 				9265625D29BAB7CC00A5F2DC /* ImagesListViewModel.swift in Sources */,
 				9265620729B941F300A5F2DC /* AppDelegate.swift in Sources */,
+				9265625F29BB68DC00A5F2DC /* ImagesListCollectionView.swift in Sources */,
 				9265624729BA525300A5F2DC /* GalleriesRepositoryImpl.swift in Sources */,
 				9265620929B941F300A5F2DC /* SceneDelegate.swift in Sources */,
 				9265625229BA78EC00A5F2DC /* NetworkError.swift in Sources */,

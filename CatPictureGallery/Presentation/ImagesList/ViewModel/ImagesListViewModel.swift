@@ -13,8 +13,8 @@ protocol ImagesListViewModelInput {
 }
 
 protocol ImagesListViewModelOutput {
-    var items: (([Image]) -> Void)? { get }
-    var error: (Error) -> Void { get }
+    var items: (([Image]) -> Void)? { get set }
+    var error: ((Error) -> Void)? { get set }
 }
 
 protocol ImagesListViewModel: ImagesListViewModelInput, ImagesListViewModelOutput { }
@@ -34,7 +34,7 @@ final class ImagesListViewModelImpl: ImagesListViewModel {
     }
 
     var items: (([Image]) -> Void)?
-    var error: (Error) -> Void = {_ in}
+    var error: ((Error) -> Void)?
 
     init(imagesCatUseCase: ImagesCatUseCase = ImagesCatUseCaseImpl(),
          actions: ImagesListViewModelActions? = nil) {
@@ -48,7 +48,7 @@ final class ImagesListViewModelImpl: ImagesListViewModel {
             case .success(let images):
                 self?.images = images
             case .failure(let error):
-                self?.error(error)
+                self?.error?(error)
             }
         }
     }
