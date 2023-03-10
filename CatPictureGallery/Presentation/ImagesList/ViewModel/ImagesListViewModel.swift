@@ -8,9 +8,53 @@
 import Foundation
 
 protocol ImagesListViewModelInput {
+    func didLoad()
     func didSelect(index: Int)
 }
 
 protocol ImagesListViewModelOutput {
-//    var items: 
+    var items: (([Image]) -> Void)? { get }
+    var error: (Error) -> Void { get }
+}
+
+protocol ImagesListViewModel: ImagesListViewModelInput, ImagesListViewModelOutput { }
+
+protocol ImagesListViewModelActions {
+    func showImageDetail(image: Image)
+}
+
+final class ImagesListViewModelImpl: ImagesListViewModel {
+    private let imagesCatUseCase: ImagesCatUseCase
+    private let actions: ImagesListViewModelActions?
+
+    private var images: [Image] = [] {
+        didSet {
+            items?(images)
+        }
+    }
+
+    var items: (([Image]) -> Void)?
+    var error: (Error) -> Void = {_ in}
+
+    init(imagesCatUseCase: ImagesCatUseCase = ImagesCatUseCaseImpl(),
+         actions: ImagesListViewModelActions? = nil) {
+        self.imagesCatUseCase = imagesCatUseCase
+        self.actions = actions
+    }
+
+    func didLoad() {
+        imagesCatUseCase.execute { [weak self] result in
+            switch result {
+            case .success(let images):
+                self?.images = images
+            case .failure(let error):
+                self?.error(error)
+            }
+        }
+    }
+
+    func didSelect(index: Int) {
+        let image = images[index]
+        actions?.showImageDetail(image: image)
+    }
 }

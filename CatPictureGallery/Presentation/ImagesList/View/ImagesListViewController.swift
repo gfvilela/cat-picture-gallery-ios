@@ -8,23 +8,16 @@
 import UIKit
 
 class ImagesListViewController: UIViewController {
+    lazy var viewModel: ImagesListViewModel = ImagesListViewModelImpl(actions: self)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-
-        //TODO: Remove this code to implement the real logic.
-        let useCase = ImagesCatUseCaseImpl()
-        useCase.execute { result in
-            switch result {
-            case .success(let images):
-                print("Images Count: \(images.count)")
-            case .failure(let error):
-                print("Error in \(Self.self).\(#function): \(error)")
-            }
-        }
     }
+}
 
-
+extension ImagesListViewController: ImagesListViewModelActions {
+    func showImageDetail(image: Image) {
+        //TODO: Show image detail
+    }
 }
 
