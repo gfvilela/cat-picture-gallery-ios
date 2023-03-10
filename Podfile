@@ -9,6 +9,7 @@ target 'CatPictureGallery' do
 
   # Pods for CatPictureGallery
   pod 'Alamofire', '5.6.1'
+  pod 'Kingfisher', '~> 7.0'
 
   target 'CatPictureGalleryTests' do
     inherit! :search_paths
