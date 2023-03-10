@@ -77,11 +77,22 @@
                     <connections>
                         <outlet property="imagesListCollectionView" destination="6mh-Bf-z1o" id="cfD-DV-yBq"/>
                         <outlet property="loadingView" destination="vUN-iU-AfB" id="PJI-br-9gf"/>
+                        <segue destination="UQX-M2-9uZ" kind="show" identifier="showImageDetail" id="InS-HZ-MSN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="143" y="4"/>
+            <point key="canvasLocation" x="323" y="4"/>
+        </scene>
+        <!--ImageDetailsStoryboard-->
+        <scene sceneID="F3i-hk-r9F">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ImageDetailsStoryboard" id="UQX-M2-9uZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="1vs-zG-dE8"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zYw-wl-wo8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1142" y="4"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="km1-fp-7aC">

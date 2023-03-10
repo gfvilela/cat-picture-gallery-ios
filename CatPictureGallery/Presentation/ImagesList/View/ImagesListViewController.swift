@@ -15,6 +15,7 @@ class ImagesListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        imagesListCollectionView.imagesListDelegate = self
         self.loadingView.isHidden = false
         viewModel.items = { [weak self] images in
             DispatchQueue.main.async {
@@ -24,11 +25,27 @@ class ImagesListViewController: UIViewController {
         }
         viewModel.didLoad()
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destinationViewController = segue.destination as? ImageDetailsViewController else {
+            return
+        }
+
+        if let imageSender = sender as? Image {
+            destinationViewController.image = imageSender
+        }
+    }
 }
 
 extension ImagesListViewController: ImagesListViewModelActions {
     func showImageDetail(image: Image) {
-        //TODO: Show image detail
+        performSegue(withIdentifier: "showImageDetail", sender: image)
+    }
+}
+
+extension ImagesListViewController: ImagesListCollectionViewDelegate {
+    func didSelectItem(indexPath: IndexPath) {
+        viewModel.didSelect(index: indexPath.item)
     }
 }
 

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <accessibilityOverrides/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image Detail-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ImageDetails" title="Image Detail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ImageDetailsViewController" customModule="CatPictureGallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yLV-z4-Ekb">
+                                <rect key="frame" x="16" y="59" width="361" height="480"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="480" id="aBP-gi-dfS"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyA-Dc-kyr">
+                                <rect key="frame" x="16" y="551" width="361" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yLV-z4-Ekb" secondAttribute="trailing" constant="16" id="1oh-ja-RJW"/>
+                            <constraint firstItem="TyA-Dc-kyr" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Cst-hu-Nhv"/>
+                            <constraint firstItem="yLV-z4-Ekb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Gev-3P-QBm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="TyA-Dc-kyr" secondAttribute="trailing" constant="16" id="ati-F7-KvC"/>
+                            <constraint firstItem="TyA-Dc-kyr" firstAttribute="top" secondItem="yLV-z4-Ekb" secondAttribute="bottom" constant="12" id="dh2-3j-9yz"/>
+                            <constraint firstItem="yLV-z4-Ekb" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="gnN-2x-FDJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Image Detail" id="yfK-bn-JMO"/>
+                    <connections>
+                        <outlet property="descriptionDetail" destination="TyA-Dc-kyr" id="FdA-Wz-wpr"/>
+                        <outlet property="imageView" destination="yLV-z4-Ekb" id="bvb-4x-xdB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.69465648854961" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

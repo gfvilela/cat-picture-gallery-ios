@@ -13,11 +13,12 @@ class ImagesListCollectionView: UICollectionView, UICollectionViewDataSource, UI
             self.reloadData()
         }
     }
+    weak var imagesListDelegate: ImagesListCollectionViewDelegate?
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.dataSource = self
-        self.delegate = self
+        dataSource = self
+        delegate = self
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -42,4 +43,12 @@ class ImagesListCollectionView: UICollectionView, UICollectionViewDataSource, UI
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 100, height: 100)
     }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        imagesListDelegate?.didSelectItem(indexPath: indexPath)
+    }
+}
+
+protocol ImagesListCollectionViewDelegate: NSObject {
+    func didSelectItem(indexPath: IndexPath)
 }

@@ -15,7 +15,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
         guard let url = URL(string: link) else {
             return
         }
-        imageView.kf.setImage(with: url, placeholder: UIImage(), options: [
+        imageView.kf.setImage(with: url, options: [
             .transition(.fade(0.25)),
             .backgroundDecode
         ])
