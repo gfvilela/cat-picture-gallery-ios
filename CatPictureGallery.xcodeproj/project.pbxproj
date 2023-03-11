@@ -33,6 +33,8 @@
 		9265626229BB695600A5F2DC /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9265626129BB695600A5F2DC /* ImageCollectionViewCell.swift */; };
 		9265626529BBB66F00A5F2DC /* ImageDetailsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9265626429BBB66F00A5F2DC /* ImageDetailsStoryboard.storyboard */; };
 		9265626929BBB6BA00A5F2DC /* ImageDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9265626829BBB6BA00A5F2DC /* ImageDetailsViewController.swift */; };
+		9265626F29BBE4A600A5F2DC /* ImagesCatUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9265626E29BBE4A600A5F2DC /* ImagesCatUseCaseTest.swift */; };
+		9265627129BBE4E800A5F2DC /* GalleriesRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9265627029BBE4E800A5F2DC /* GalleriesRepositoryMock.swift */; };
 		A6335C611D75A171DB13DEF8 /* Pods_CatPictureGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 560D5DA282DFB2FD6A532C6E /* Pods_CatPictureGallery.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +90,8 @@
 		9265626129BB695600A5F2DC /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		9265626429BBB66F00A5F2DC /* ImageDetailsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageDetailsStoryboard.storyboard; sourceTree = "<group>"; };
 		9265626829BBB6BA00A5F2DC /* ImageDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailsViewController.swift; sourceTree = "<group>"; };
+		9265626E29BBE4A600A5F2DC /* ImagesCatUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCatUseCaseTest.swift; sourceTree = "<group>"; };
+		9265627029BBE4E800A5F2DC /* GalleriesRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleriesRepositoryMock.swift; sourceTree = "<group>"; };
 		BD7FD97055B5D95F167A9352 /* Pods-CatPictureGalleryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatPictureGalleryTests.debug.xcconfig"; path = "Target Support Files/Pods-CatPictureGalleryTests/Pods-CatPictureGalleryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE9B9C92E56E68DA885E1B30 /* Pods-CatPictureGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatPictureGallery.release.xcconfig"; path = "Target Support Files/Pods-CatPictureGallery/Pods-CatPictureGallery.release.xcconfig"; sourceTree = "<group>"; };
 		D3F3A85BC3C032C7B8A51EAF /* Pods_CatPictureGalleryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatPictureGalleryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +177,8 @@
 		9265621C29B941F500A5F2DC /* CatPictureGalleryTests */ = {
 			isa = PBXGroup;
 			children = (
+				9265626D29BBE46100A5F2DC /* Mocks */,
+				9265626C29BBE45600A5F2DC /* Domain */,
 				9265621D29B941F500A5F2DC /* CatPictureGalleryTests.swift */,
 			);
 			path = CatPictureGalleryTests;
@@ -349,6 +355,22 @@
 				9265626829BBB6BA00A5F2DC /* ImageDetailsViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		9265626C29BBE45600A5F2DC /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				9265626E29BBE4A600A5F2DC /* ImagesCatUseCaseTest.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		9265626D29BBE46100A5F2DC /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				9265627029BBE4E800A5F2DC /* GalleriesRepositoryMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		CE876D841E4820ABE0E63308 /* Pods */ = {
@@ -628,7 +650,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9265626F29BBE4A600A5F2DC /* ImagesCatUseCaseTest.swift in Sources */,
 				9265621E29B941F500A5F2DC /* CatPictureGalleryTests.swift in Sources */,
+				9265627129BBE4E800A5F2DC /* GalleriesRepositoryMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

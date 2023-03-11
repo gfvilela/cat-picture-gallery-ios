@@ -14,12 +14,8 @@ protocol ImagesCatUseCase {
 final class ImagesCatUseCaseImpl: ImagesCatUseCase {
     private let galeriesRepository: GalleriesRepository
 
-    init(galeriesRepository: GalleriesRepository) {
+    init(galeriesRepository: GalleriesRepository = GalleriesRepositoryImpl()) {
         self.galeriesRepository = galeriesRepository
-    }
-
-    init() {
-        self.galeriesRepository = GalleriesRepositoryImpl()
     }
 
     func execute(completion: @escaping (Result<[Image], Error>) -> Void) {

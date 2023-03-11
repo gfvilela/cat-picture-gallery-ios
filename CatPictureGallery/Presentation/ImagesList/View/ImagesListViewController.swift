@@ -23,6 +23,17 @@ class ImagesListViewController: UIViewController {
                 self?.imagesListCollectionView.items = images
             }
         }
+        viewModel.error = { [weak self] _ in
+            var dialogMessage = UIAlertController(title: "Error", message: "An error occurred while trying to load the images", preferredStyle: .alert)
+            let retry = UIAlertAction(title: "OK", style: .default, handler: { [weak self] _ in
+                self?.viewModel.didLoad()
+            })
+
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+            dialogMessage.addAction(retry)
+            dialogMessage.addAction(cancel)
+            self?.present(dialogMessage, animated: true, completion: nil)
+        }
         viewModel.didLoad()
     }
 
