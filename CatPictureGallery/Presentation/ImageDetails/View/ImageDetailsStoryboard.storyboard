@@ -25,21 +25,50 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyA-Dc-kyr">
-                                <rect key="frame" x="16" y="551" width="361" height="0.0"/>
+                                <rect key="frame" x="16" y="585" width="361" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MOG-hf-xgw">
+                                <rect key="frame" x="32" y="551" width="329" height="1"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="iXo-O6-DuH"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Exa-iF-yEk">
+                                <rect key="frame" x="16" y="558" width="361" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qes-7Z-2Kq">
+                                <rect key="frame" x="32" y="597" width="329" height="1"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="va8-dL-WSS"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Exa-iF-yEk" firstAttribute="top" secondItem="MOG-hf-xgw" secondAttribute="bottom" constant="6" id="1Vf-ss-JtU"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yLV-z4-Ekb" secondAttribute="trailing" constant="16" id="1oh-ja-RJW"/>
+                            <constraint firstItem="TyA-Dc-kyr" firstAttribute="top" secondItem="Exa-iF-yEk" secondAttribute="bottom" constant="6" id="52L-I9-VNO"/>
+                            <constraint firstItem="Qes-7Z-2Kq" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" constant="16" id="6G3-ec-qR4"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Exa-iF-yEk" secondAttribute="trailing" constant="16" id="BJc-Rw-MN5"/>
                             <constraint firstItem="TyA-Dc-kyr" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Cst-hu-Nhv"/>
                             <constraint firstItem="yLV-z4-Ekb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Gev-3P-QBm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qes-7Z-2Kq" secondAttribute="trailing" constant="16" id="HQB-RZ-zGS"/>
+                            <constraint firstItem="Qes-7Z-2Kq" firstAttribute="top" secondItem="TyA-Dc-kyr" secondAttribute="bottom" constant="12" id="Lgp-eE-HZ9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MOG-hf-xgw" secondAttribute="trailing" constant="16" id="VAw-Fc-vcX"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="TyA-Dc-kyr" secondAttribute="trailing" constant="16" id="ati-F7-KvC"/>
-                            <constraint firstItem="TyA-Dc-kyr" firstAttribute="top" secondItem="yLV-z4-Ekb" secondAttribute="bottom" constant="12" id="dh2-3j-9yz"/>
                             <constraint firstItem="yLV-z4-Ekb" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="gnN-2x-FDJ"/>
+                            <constraint firstItem="MOG-hf-xgw" firstAttribute="top" secondItem="yLV-z4-Ekb" secondAttribute="bottom" constant="12" id="op5-jo-FFF"/>
+                            <constraint firstItem="MOG-hf-xgw" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" constant="16" id="yUm-6H-6su"/>
+                            <constraint firstItem="Exa-iF-yEk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="yrL-KB-4h0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Image Detail" id="yfK-bn-JMO"/>
