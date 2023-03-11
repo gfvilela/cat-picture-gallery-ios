@@ -24,6 +24,14 @@ The project uses the MVVM Clean architecture, which separates the application re
 
 - **Data**: this layer is responsible for obtaining and storing data. Here are the classes that deal with data access, whether through network services, local databases, or other sources. The repository pattern is used in this layer, which provides an interface for fetching and storing data, decoupling the Data layer from the rest of the application. The repository pattern also facilitates unit testing, as it allows for easier mocking of data sources.
 
+### Data Flow
+![Data Flow](./dataflow.png)
+1. View(UI) calls method from ViewModel (Presenter).
+2. ViewModel executes Use Case.
+3. Use Case combines data from User and Repositories.
+4. Each Repository returns data from a Remote Data (Network), Persistent DB Storage Source or In-memory Data (Remote or Cached).
+5. Information flows back to the View(UI) where we display the list of items.
+
 ## Dependencies
 The project uses the following dependencies, managed by Cocoapods:
 
